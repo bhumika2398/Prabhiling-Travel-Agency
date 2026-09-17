@@ -1,8 +1,21 @@
 import React from 'react';
 import { SERVICES } from '../data/servicesData';
 import PaperCard from './scrapbook/PaperCard';
+import { Bus, Plane, Train, Compass, Car, Headphones, ArrowRight } from 'lucide-react';
 
 export default function ServicesSection({ onOpenBookingModal }) {
+  const renderIcon = (iconName) => {
+    switch (iconName) {
+      case 'Bus': return <Bus size={22} />;
+      case 'Plane': return <Plane size={22} />;
+      case 'Train': return <Train size={22} />;
+      case 'Compass': return <Compass size={22} />;
+      case 'Car': return <Car size={22} />;
+      case 'Headphones': return <Headphones size={22} />;
+      default: return <Plane size={22} />;
+    }
+  };
+
   return (
     <section className="section-padding" style={{ backgroundColor: 'var(--color-paper-sheet)', borderTop: '1px solid var(--color-border)' }}>
       <div className="container">
@@ -45,11 +58,10 @@ export default function ServicesSection({ onOpenBookingModal }) {
                       borderRadius: '6px',
                       display: 'flex',
                       alignItems: 'center',
-                      justify: 'center',
-                      fontSize: '1.25rem'
+                      justify: 'center'
                     }}
                   >
-                    {srv.icon || '✈'}
+                    {renderIcon(srv.iconName)}
                   </div>
 
                   <span style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-forest)', fontWeight: '700' }}>
@@ -60,31 +72,53 @@ export default function ServicesSection({ onOpenBookingModal }) {
                 <h3
                   style={{
                     fontFamily: 'var(--font-display)',
-                    fontSize: '1.3rem',
+                    fontSize: '1.35rem',
                     fontWeight: '700',
                     color: 'var(--color-ink)',
-                    marginBottom: '0.35rem'
+                    marginBottom: '0.2rem'
                   }}
                 >
                   {srv.title}
                 </h3>
 
-                <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.5rem' }}>
-                  "{srv.tagline || 'Reliable booking support'}"
-                </p>
+                <span style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.1rem', color: 'var(--color-terracotta)', display: 'block', marginBottom: '0.6rem' }}>
+                  "{srv.tagline}"
+                </span>
 
-                <p style={{ fontSize: '0.925rem', color: 'var(--color-ink-muted)', lineHeight: '1.5', marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-ink-muted)', lineHeight: '1.5', marginBottom: '1.25rem' }}>
                   {srv.description}
                 </p>
               </div>
 
-              <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.85rem' }}>
+              <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-typewriter)',
+                    fontSize: '0.65rem',
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid var(--color-border)',
+                    padding: '0.2rem 0.5rem',
+                    borderRadius: '4px',
+                    color: 'var(--color-terracotta)',
+                    fontWeight: '700'
+                  }}
+                >
+                  {srv.badge || 'AVAILABLE'}
+                </span>
+
                 <button
                   onClick={() => onOpenBookingModal({ service: srv.title })}
-                  className="btn btn-primary btn-sm"
-                  style={{ width: '100%' }}
+                  style={{
+                    fontSize: '0.85rem',
+                    fontWeight: '700',
+                    color: 'var(--color-forest)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.25rem',
+                    cursor: 'pointer'
+                  }}
                 >
-                  Request Booking Dossier →
+                  Book Service <ArrowRight size={14} />
                 </button>
               </div>
             </PaperCard>
@@ -94,4 +128,3 @@ export default function ServicesSection({ onOpenBookingModal }) {
     </section>
   );
 }
-

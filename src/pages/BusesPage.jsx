@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FLEET } from '../data/fleetData';
 import TicketStub from '../components/scrapbook/TicketStub';
+import { Bus, ShieldCheck, Star } from 'lucide-react';
 
 export default function BusesPage({ onOpenBookingModal }) {
   const [filterType, setFilterType] = useState('All');
@@ -115,9 +116,15 @@ export default function BusesPage({ onOpenBookingModal }) {
                 color: '#FDFBF7'
               }}
             >
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>🚌 7 Owned Luxury Coaches</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>🛡️ Daily Mechanical & Safety Check</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>⭐ AC Sleeper & Seater Berths</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Bus size={18} style={{ color: '#C9572E' }} /> 7 Owned Luxury Coaches
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <ShieldCheck size={18} style={{ color: '#4ADE80' }} /> Daily Mechanical & Safety Check
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Star size={18} style={{ color: '#FACC15' }} /> AC Sleeper & Seater Berths
+              </span>
             </div>
           </div>
         </div>

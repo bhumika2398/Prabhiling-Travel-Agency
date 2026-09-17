@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TravelStamp from './scrapbook/TravelStamp';
+import AnimatedCounter from './ui/AnimatedCounter';
 
 export default function AboutSection({ onOpenBookingModal }) {
   return (
@@ -36,7 +37,7 @@ export default function AboutSection({ onOpenBookingModal }) {
                 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
+                  src="/about.jfif"
                   alt="Prabhuling Travel Agency Fleet & Team"
                   style={{
                     width: '100%',
@@ -119,7 +120,7 @@ export default function AboutSection({ onOpenBookingModal }) {
               >
                 <div>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: '800', color: 'var(--color-forest)' }}>
-                    7+
+                    <AnimatedCounter target={7} suffix="+" />
                   </div>
                   <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.7rem', color: 'var(--color-ink-light)' }}>
                     OWNED BUS FLEET
@@ -128,7 +129,7 @@ export default function AboutSection({ onOpenBookingModal }) {
 
                 <div>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: '800', color: 'var(--color-terracotta)' }}>
-                    10,000+
+                    <AnimatedCounter target={50000} suffix="+" />
                   </div>
                   <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.7rem', color: 'var(--color-ink-light)' }}>
                     HAPPY TRAVELERS
@@ -137,7 +138,7 @@ export default function AboutSection({ onOpenBookingModal }) {
 
                 <div>
                   <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: '800', color: 'var(--color-forest)' }}>
-                    100%
+                    <AnimatedCounter target={100} suffix="%" />
                   </div>
                   <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.7rem', color: 'var(--color-ink-light)' }}>
                     HUMAN ASSISTANCE

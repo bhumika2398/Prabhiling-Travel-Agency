@@ -150,9 +150,15 @@ export default function TrainBookingPage({ config, onOpenBookingModal }) {
                 color: '#FDFBF7'
               }}
             >
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>✓ All Zones Covered</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>✓ Tatkal Assistance</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>✓ Lower Berth Preference</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <CheckCircle2 size={18} style={{ color: '#4ADE80' }} /> All Zones Covered
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Zap size={18} style={{ color: '#FACC15' }} /> Tatkal Assistance
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Train size={18} style={{ color: '#38BDF8' }} /> Lower Berth Preference
+              </span>
             </div>
           </div>
         </div>

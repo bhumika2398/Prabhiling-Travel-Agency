@@ -1,5 +1,6 @@
 import React from 'react';
 import PaperCard from './scrapbook/PaperCard';
+import { MapPin } from 'lucide-react';
 
 export default function TravelStories() {
   const stories = [
@@ -25,7 +26,7 @@ export default function TravelStories() {
       title: 'Chasing stone chariots & timeless legends in Hampi.',
       location: 'Hampi Heritage Zone',
       excerpt: 'Walking among 14th-century boulders & Vijayanagara architecture with our veteran local guides...',
-      image: 'https://images.unsplash.com/photo-1600100395938-4223d778d223?auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?auto=format&fit=crop&w=800&q=80'
     }
   ];
 
@@ -87,7 +88,7 @@ export default function TravelStories() {
 
               <div style={{ padding: '1.25rem' }}>
                 <span style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.2rem', color: 'var(--color-forest)', display: 'block', marginBottom: '0.2rem' }}>
-                  📍 {story.location}
+                  <MapPin size={14} style={{ color: 'var(--color-terracotta)', display: 'inline', marginRight: '4px', verticalAlign: '-2px' }} /> {story.location}
                 </span>
 
                 <h3

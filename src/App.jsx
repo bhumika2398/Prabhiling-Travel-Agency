@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import SlowmoScrollObserver from './components/SlowmoScrollObserver';
 
 // Modals & Config Drawer
 import BookingModal from './components/Modals/BookingModal';
@@ -67,6 +68,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <SlowmoScrollObserver />
       <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--color-bg-main)' }}>
         {/* Navigation Header */}
         <Header

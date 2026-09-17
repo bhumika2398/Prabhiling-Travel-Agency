@@ -8,7 +8,7 @@ export const TOUR_PACKAGES = [
     startingPrice: 5999,
     featured: true,
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1600100397608-f090742f4955?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=800&q=80",
     badge: "Most Popular",
     highlights: [
       "AC Sleeper/Seater Bus Transportation",

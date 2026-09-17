@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plane, Calendar, MapPin, Users, Send, CheckCircle2, ShieldCheck, Zap, Award, Globe } from 'lucide-react';
+import { Plane, Calendar, MapPin, Users, Send, CheckCircle2, ShieldCheck, Zap, Award, Globe, Tag, Briefcase } from 'lucide-react';
 import PaperCard from '../components/scrapbook/PaperCard';
 import TicketCard from '../components/scrapbook/TicketCard';
 import TravelStamp from '../components/scrapbook/TravelStamp';
@@ -150,9 +150,15 @@ export default function FlightBookingPage({ config, onOpenBookingModal }) {
                 color: '#FDFBF7'
               }}
             >
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>✈️ All Routes Covered</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>🏷️ Fare Comparison</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>🧳 Baggage & Seat Help</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Plane size={18} style={{ color: '#38BDF8' }} /> All Routes Covered
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Tag size={18} style={{ color: '#FACC15' }} /> Fare Comparison
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Briefcase size={18} style={{ color: '#4ADE80' }} /> Baggage & Seat Help
+              </span>
             </div>
           </div>
         </div>

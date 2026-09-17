@@ -17,7 +17,7 @@ export const POPULAR_DESTINATIONS = [
     tagline: "Palace City & Cultural Heart",
     dailyBuses: 8,
     startingPrice: 450,
-    image: "https://images.unsplash.com/photo-1600100397608-f090742f4955?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=800&q=80",
     popularRoutes: ["Bengaluru", "Coorg", "Ooty", "Wayanad"]
   },
   {

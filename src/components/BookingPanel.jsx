@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bus, Plane, Train, Calendar, MapPin, Users, Search, ArrowRightLeft } from 'lucide-react';
+import { Bus, Plane, Train, Calendar, MapPin, Users, Search, ArrowRightLeft, Sparkles, Compass } from 'lucide-react';
 
 export default function BookingPanel({ onOpenBookingModal }) {
   const [activeTab, setActiveTab] = useState('Bus');
@@ -221,7 +221,7 @@ export default function BookingPanel({ onOpenBookingModal }) {
           {/* Footer Strip */}
           <div style={{ backgroundColor: '#F5EFE3', padding: '0.65rem 1.5rem', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.85rem', flexWrap: 'wrap', gap: '0.5rem' }}>
             <span style={{ color: 'var(--color-ink-muted)', fontFamily: 'var(--font-handwriting)', fontSize: '1.1rem' }}>
-              💡 Direct human desk check — no hidden internet charges!
+              <Sparkles size={16} style={{ color: 'var(--color-terracotta)', display: 'inline', marginRight: '4px', verticalAlign: '-2px' }} /> Direct human desk check — no hidden internet charges!
             </span>
             <span style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.75rem', fontWeight: '700', color: 'var(--color-forest)' }}>
               DESK HELPLINE: 98765 43210

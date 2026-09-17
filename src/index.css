@@ -493,3 +493,66 @@ input:focus, select:focus, textarea:focus {
     transform: rotate(0deg) !important;
   }
 }
+
+/* Paper Deck Carousel Navigation Buttons */
+.paper-nav-btn {
+  pointer-events: auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-paper-sheet);
+  border: 1.5px solid var(--color-border-strong);
+  color: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-paper);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.paper-nav-btn:hover {
+  background-color: var(--color-terracotta) !important;
+  color: #ffffff !important;
+  border-color: var(--color-terracotta) !important;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(200, 90, 50, 0.35);
+}
+
+.paper-nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* ==========================================================================
+   GLOBAL CINEMATIC SLOW-MOTION SCROLL REVEAL SYSTEM
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base slow-motion hidden state for components all over the website */
+.slowmo-init {
+  opacity: 0 !important;
+  transform: translateY(48px) scale(0.965) !important;
+  transition: opacity 1.25s cubic-bezier(0.16, 1, 0.3, 1), transform 1.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: opacity, transform;
+}
+
+/* Triggered slow-motion reveal when scrolled into view */
+.slowmo-visible,
+.slowmo-init.slowmo-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Accessibility fallback for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slowmo-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+

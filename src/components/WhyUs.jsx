@@ -1,5 +1,6 @@
 import React from 'react';
 import PaperCard from './scrapbook/PaperCard';
+import AnimatedCounter from './ui/AnimatedCounter';
 
 export default function WhyUs() {
   return (
@@ -44,25 +45,42 @@ export default function WhyUs() {
               </p>
             </div>
 
+            {/* Scroll-Triggered Animated Counter Stats Grid */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div style={{ backgroundColor: 'var(--color-paper-cream)', padding: '1.25rem 1rem', borderRadius: '6px', border: '1px solid var(--color-border)', textAlign: 'center' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-forest)' }}>7</div>
-                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)' }}>ACTIVE BUS FLEET</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-forest)' }}>
+                  <AnimatedCounter target={7} />
+                </div>
+                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)', fontWeight: '700' }}>
+                  ACTIVE BUS FLEET
+                </div>
               </div>
 
               <div style={{ backgroundColor: 'var(--color-paper-cream)', padding: '1.25rem 1rem', borderRadius: '6px', border: '1px solid var(--color-border)', textAlign: 'center' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-terracotta)' }}>15+</div>
-                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)' }}>YEARS OF SERVICE</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-terracotta)' }}>
+                  <AnimatedCounter target={15} suffix="+" />
+                </div>
+                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)', fontWeight: '700' }}>
+                  YEARS OF SERVICE
+                </div>
               </div>
 
               <div style={{ backgroundColor: 'var(--color-paper-cream)', padding: '1.25rem 1rem', borderRadius: '6px', border: '1px solid var(--color-border)', textAlign: 'center' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-forest)' }}>50,000+</div>
-                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)' }}>HAPPY PASSENGERS</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-forest)' }}>
+                  <AnimatedCounter target={50000} suffix="+" />
+                </div>
+                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)', fontWeight: '700' }}>
+                  HAPPY PASSENGERS
+                </div>
               </div>
 
               <div style={{ backgroundColor: 'var(--color-paper-cream)', padding: '1.25rem 1rem', borderRadius: '6px', border: '1px solid var(--color-border)', textAlign: 'center' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-terracotta)' }}>100%</div>
-                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)' }}>HUMAN SUPPORT</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: '800', color: 'var(--color-terracotta)' }}>
+                  <AnimatedCounter target={100} suffix="%" />
+                </div>
+                <div style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.675rem', color: 'var(--color-ink-light)', fontWeight: '700' }}>
+                  HUMAN SUPPORT
+                </div>
               </div>
             </div>
           </div>
@@ -101,4 +119,3 @@ export default function WhyUs() {
     </section>
   );
 }
-

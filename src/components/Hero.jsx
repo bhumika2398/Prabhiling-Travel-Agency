@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ArrowDown } from 'lucide-react';
+import { ArrowRight, ArrowDown, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -61,7 +61,7 @@ export default function Hero() {
         }}
         className="hero-location-tag"
       >
-        📍 12°25'N 75°44'E • WESTERN GHATS
+        <MapPin size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: '-2px', color: 'var(--color-terracotta)' }} /> 12°25'N 75°44'E • WESTERN GHATS
       </div>
 
       {/* 4. Central Hero Copy & Actions */}

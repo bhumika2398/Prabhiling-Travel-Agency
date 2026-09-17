@@ -3,6 +3,7 @@ import { PACKAGES } from '../data/packagesData';
 import PaperCard from '../components/scrapbook/PaperCard';
 import TravelStamp from '../components/scrapbook/TravelStamp';
 import MapFragment from '../components/scrapbook/MapFragment';
+import { Palmtree, Mountain, Bus } from 'lucide-react';
 
 export default function ToursPage({ onOpenBookingModal }) {
   const [filterDest, setFilterDest] = useState('All');
@@ -127,9 +128,15 @@ export default function ToursPage({ onOpenBookingModal }) {
                 color: '#FDFBF7'
               }}
             >
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>🏖️ Heritage & Coastal Tours</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>⛰️ Coffee Hill Stations</span>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.4rem 0.9rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>🚌 Luxury Fleet Sightseeing</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Palmtree size={18} style={{ color: '#38BDF8' }} /> Heritage & Coastal Tours
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Mountain size={18} style={{ color: '#4ADE80' }} /> Coffee Hill Stations
+              </span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', backgroundColor: 'rgba(0,0,0,0.4)', padding: '0.45rem 1rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.2)' }}>
+                <Bus size={18} style={{ color: '#C9572E' }} /> Luxury Fleet Sightseeing
+              </span>
             </div>
           </div>
         </div>
