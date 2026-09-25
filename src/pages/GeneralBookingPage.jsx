@@ -55,8 +55,12 @@ export default function GeneralBookingPage({ config }) {
                 marginBottom: '0.85rem'
               }}
             >
-              BOOKING MANIFESTO FORM
+              Booking Manifesto Form
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.4rem', color: 'var(--color-terracotta)', marginBottom: '0.6rem' }}>
+              One desk, every journey.
+            </p>
 
             <p style={{ fontSize: '1.075rem', color: 'var(--color-ink-muted)', lineHeight: '1.65' }}>
               Submit your journey details below or connect directly on WhatsApp for human booking assistance.

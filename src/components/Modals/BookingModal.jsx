@@ -4,8 +4,6 @@ import { buildWhatsAppLink } from '../../utils/whatsapp';
 import TravelStamp from '../scrapbook/TravelStamp';
 
 export default function BookingModal({ isOpen, onClose, initialData, config }) {
-  if (!isOpen) return null;
-
   const [serviceType, setServiceType] = useState(initialData?.serviceType || 'Bus');
   const [selectedBus, setSelectedBus] = useState(initialData?.selectedBus || '');
   const [packageTitle, setPackageTitle] = useState(initialData?.packageTitle || '');
@@ -51,6 +49,8 @@ export default function BookingModal({ isOpen, onClose, initialData, config }) {
     window.open(url, '_blank');
   };
 
+  if (!isOpen) return null;
+
   return (
     <div
       style={{
@@ -61,7 +61,7 @@ export default function BookingModal({ isOpen, onClose, initialData, config }) {
         backdropFilter: 'blur(4px)',
         display: 'flex',
         alignItems: 'center',
-        justify: 'center',
+        justifyContent: 'center',
         padding: '1rem'
       }}
       className="animate-fade-in"
@@ -86,7 +86,7 @@ export default function BookingModal({ isOpen, onClose, initialData, config }) {
             color: '#FFFFFF',
             padding: '1.25rem 1.5rem',
             display: 'flex',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             alignItems: 'center'
           }}
         >

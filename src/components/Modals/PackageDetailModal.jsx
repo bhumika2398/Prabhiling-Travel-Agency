@@ -15,7 +15,7 @@ export default function PackageDetailModal({ packageData, isOpen, onClose, onEnq
         backdropFilter: 'blur(4px)',
         display: 'flex',
         alignItems: 'center',
-        justify: 'center',
+        justifyContent: 'center',
         padding: '1rem'
       }}
       className="animate-fade-in"
@@ -40,7 +40,7 @@ export default function PackageDetailModal({ packageData, isOpen, onClose, onEnq
             color: '#FFFFFF',
             padding: '1.25rem 1.5rem',
             display: 'flex',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             alignItems: 'center'
           }}
         >
@@ -61,7 +61,7 @@ export default function PackageDetailModal({ packageData, isOpen, onClose, onEnq
         <div style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
             <div>
-              <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.25rem', color: 'var(--color-terracotta)', marginBottom: '0.4rem' }}>
+              <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.25rem', color: 'var(--color-terracotta)', marginBottom: '0.4rem' }}>
                 "{packageData.tagline || packageData.subtitle || 'Custom group itinerary'}"
               </p>
               <p style={{ fontSize: '0.925rem', color: 'var(--color-ink-muted)', lineHeight: '1.5' }}>
@@ -93,7 +93,7 @@ export default function PackageDetailModal({ packageData, isOpen, onClose, onEnq
             <div>
               <span style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.65rem', color: 'var(--color-ink-light)', display: 'block' }}>STARTING PRICE</span>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', fontWeight: '800', color: 'var(--color-forest)' }}>
-                ₹{packageData.price ? packageData.price.toLocaleString() : '4,999'}
+                ₹{packageData.startingPrice ? packageData.startingPrice.toLocaleString() : '4,999'}
               </div>
             </div>
 

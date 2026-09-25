@@ -89,8 +89,12 @@ export default function DestinationsPage() {
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)'
               }}
             >
-              FEATURED DESTINATIONS
+              Featured Destinations
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-terracotta)', marginBottom: '1.1rem' }}>
+              Landscapes worth the detour.
+            </p>
 
             <p
               style={{

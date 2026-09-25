@@ -66,7 +66,7 @@ export default function DestinationDetailPage({ onOpenBookingModal }) {
                 {dest.name}
               </h1>
 
-              <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.45rem', color: '#E29578', marginBottom: '1rem' }}>
+              <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.45rem', color: '#E29578', marginBottom: '1rem' }}>
                 "{dest.subtitle || dest.tagline}"
               </p>
 
@@ -220,7 +220,7 @@ export default function DestinationDetailPage({ onOpenBookingModal }) {
             backdropFilter: 'blur(8px)',
             display: 'flex',
             flexDirection: 'column',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             alignItems: 'center',
             padding: '1.5rem'
           }}

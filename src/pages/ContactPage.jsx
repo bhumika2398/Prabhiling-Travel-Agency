@@ -60,8 +60,12 @@ export default function ContactPage({ config }) {
                 marginBottom: '0.85rem'
               }}
             >
-              CONTACT OUR AGENCY DESK
+              Contact Our Agency Desk
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.4rem', color: 'var(--color-terracotta)', marginBottom: '0.6rem' }}>
+              We're just a message away.
+            </p>
 
             <p style={{ fontSize: '1.075rem', color: 'var(--color-ink-muted)', lineHeight: '1.65' }}>
               Fill in your travel details below to send an enquiry directly to our WhatsApp support (+91 80501 72818).

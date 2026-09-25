@@ -122,8 +122,12 @@ export default function FlightBookingPage({ config, onOpenBookingModal }) {
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)'
               }}
             >
-              FLIGHT TICKET ASSISTANCE
+              Flight Ticket Assistance
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-terracotta)', marginBottom: '1.1rem' }}>
+              Skies made simple, fares made fair.
+            </p>
 
             <p
               style={{

@@ -52,7 +52,7 @@ export default function BookingPanel({ onOpenBookingModal }) {
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
-                justify: 'center',
+                justifyContent: 'center',
                 gap: '0.5rem',
                 borderBottom: activeTab === 'Bus' ? '3px solid var(--color-terracotta)' : '3px solid transparent',
                 backgroundColor: activeTab === 'Bus' ? '#FDFBF7' : 'transparent',
@@ -74,7 +74,7 @@ export default function BookingPanel({ onOpenBookingModal }) {
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
-                justify: 'center',
+                justifyContent: 'center',
                 gap: '0.5rem',
                 borderBottom: activeTab === 'Flight' ? '3px solid var(--color-ocean-blue)' : '3px solid transparent',
                 backgroundColor: activeTab === 'Flight' ? '#FDFBF7' : 'transparent',
@@ -96,7 +96,7 @@ export default function BookingPanel({ onOpenBookingModal }) {
                 fontWeight: '700',
                 display: 'flex',
                 alignItems: 'center',
-                justify: 'center',
+                justifyContent: 'center',
                 gap: '0.5rem',
                 borderBottom: activeTab === 'Train' ? '3px solid var(--color-forest)' : '3px solid transparent',
                 backgroundColor: activeTab === 'Train' ? '#FDFBF7' : 'transparent',
@@ -220,7 +220,7 @@ export default function BookingPanel({ onOpenBookingModal }) {
 
           {/* Footer Strip */}
           <div style={{ backgroundColor: '#F5EFE3', padding: '0.65rem 1.5rem', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.85rem', flexWrap: 'wrap', gap: '0.5rem' }}>
-            <span style={{ color: 'var(--color-ink-muted)', fontFamily: 'var(--font-handwriting)', fontSize: '1.1rem' }}>
+            <span style={{ color: 'var(--color-ink-muted)', fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.1rem' }}>
               <Sparkles size={16} style={{ color: 'var(--color-terracotta)', display: 'inline', marginRight: '4px', verticalAlign: '-2px' }} /> Direct human desk check — no hidden internet charges!
             </span>
             <span style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.75rem', fontWeight: '700', color: 'var(--color-forest)' }}>

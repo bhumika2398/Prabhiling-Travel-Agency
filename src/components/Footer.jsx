@@ -35,7 +35,7 @@ export default function Footer({ config, onToggleConfigDrawer }) {
                   borderRadius: '4px',
                   display: 'flex',
                   alignItems: 'center',
-                  justify: 'center'
+                  justifyContent: 'center'
                 }}
               >
                 <Compass size={22} style={{ color: 'var(--color-terracotta)' }} />
@@ -54,7 +54,7 @@ export default function Footer({ config, onToggleConfigDrawer }) {
               Operating our 7 luxury bus fleet, train tickets, flight bookings, & curated South India vacation packages.
             </p>
 
-            <div style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.45rem', color: 'var(--color-forest)' }}>
+            <div style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.45rem', color: 'var(--color-forest)' }}>
               "Until the next adventure..."
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function Footer({ config, onToggleConfigDrawer }) {
             borderTop: '1px solid var(--color-border)',
             paddingTop: '1.5rem',
             display: 'flex',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
             gap: '1rem',

@@ -25,11 +25,11 @@ export default function TicketStub({
         position: 'relative',
         backgroundColor: 'var(--color-paper-sheet)',
         border: '1px solid var(--color-border)',
-        borderRadius: '10px',
+        borderRadius: '18px',
         boxShadow: '0 4px 18px -2px rgba(34, 31, 29, 0.06)',
         display: 'flex',
         flexDirection: 'column',
-        justify: 'space-between',
+        justifyContent: 'space-between',
         overflow: 'hidden',
         transition: 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease',
         ...style
@@ -54,47 +54,12 @@ export default function TicketStub({
           />
 
           {/* Top Left Ticket Badge Overlay */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '10px',
-              left: '10px',
-              backgroundColor: 'rgba(27, 77, 62, 0.92)',
-              backdropFilter: 'blur(4px)',
-              color: '#FFFFFF',
-              fontFamily: 'var(--font-typewriter)',
-              fontSize: '0.65rem',
-              fontWeight: '700',
-              padding: '0.25rem 0.65rem',
-              borderRadius: '4px',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase'
-            }}
-          >
+          <div className="tag-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
             {ticketType}
           </div>
 
           {/* Top Right Operational Status Overlay */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '10px',
-              right: '10px',
-              backgroundColor: 'rgba(253, 251, 247, 0.94)',
-              backdropFilter: 'blur(4px)',
-              color: 'var(--color-forest)',
-              fontFamily: 'var(--font-typewriter)',
-              fontSize: '0.625rem',
-              fontWeight: '700',
-              padding: '0.25rem 0.65rem',
-              borderRadius: '4px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.35rem',
-              letterSpacing: '0.06em',
-              boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
-            }}
-          >
+          <div className="tag-light" style={{ position: 'absolute', top: '12px', right: '12px', color: 'var(--color-forest)' }}>
             <span
               style={{
                 width: '6px',
@@ -149,8 +114,8 @@ export default function TicketStub({
                   color: 'var(--color-terracotta)',
                   border: '1px solid rgba(200, 90, 50, 0.3)',
                   backgroundColor: 'rgba(200, 90, 50, 0.05)',
-                  padding: '0.2rem 0.55rem',
-                  borderRadius: '4px',
+                  padding: '0.25rem 0.65rem',
+                  borderRadius: '30px',
                   letterSpacing: '0.06em',
                   whiteSpace: 'nowrap',
                   marginTop: '2px'
@@ -167,7 +132,7 @@ export default function TicketStub({
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                justify: 'space-between',
+                justifyContent: 'space-between',
                 backgroundColor: 'var(--color-paper-cream)',
                 padding: '0.75rem 1rem',
                 borderRadius: '6px',

@@ -45,7 +45,7 @@ export default function Testimonials() {
           style={{
             display: 'flex',
             alignItems: 'center',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             gap: '1rem',
             position: 'relative'
           }}
@@ -111,7 +111,7 @@ export default function Testimonials() {
                       userSelect: 'none',
                       display: 'flex',
                       flexDirection: 'column',
-                      justify: 'space-between'
+                      justifyContent: 'space-between'
                     }}
                   >
                     {/* Card Content */}
@@ -129,7 +129,7 @@ export default function Testimonials() {
 
                       <p
                         style={{
-                          fontFamily: 'var(--font-handwriting)',
+                          fontFamily: 'var(--font-handwriting)', fontStyle: 'italic',
                           fontSize: '1.45rem',
                           color: 'var(--color-ink)',
                           lineHeight: '1.4',
@@ -147,7 +147,7 @@ export default function Testimonials() {
                         borderTop: '1px solid var(--color-border)',
                         paddingTop: '1rem',
                         display: 'flex',
-                        justify: 'space-between',
+                        justifyContent: 'space-between',
                         alignItems: 'flex-end',
                         gap: '0.75rem',
                         flexWrap: 'wrap'
@@ -189,7 +189,7 @@ export default function Testimonials() {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                justify: 'center',
+                justifyContent: 'center',
                 gap: '1.25rem',
                 marginTop: '3rem'
               }}

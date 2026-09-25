@@ -65,7 +65,7 @@ export default function Destinations() {
           <div
             style={{
               display: 'flex',
-              justify: 'center',
+              justifyContent: 'center',
               gap: '0.65rem',
               flexWrap: 'wrap',
               marginTop: '1.75rem'
@@ -110,13 +110,13 @@ export default function Destinations() {
                 key={dest.id}
                 style={{
                   backgroundColor: '#FDFBF7',
-                  borderRadius: '10px',
+                  borderRadius: '18px',
                   border: '1px solid rgba(195, 180, 160, 0.5)',
                   boxShadow: 'var(--shadow-paper)',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
-                  justify: 'space-between',
+                  justifyContent: 'space-between',
                   transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease'
                 }}
                 className="card"
@@ -146,43 +146,13 @@ export default function Destinations() {
                     />
 
                     {/* Duration Badge */}
-                    <div
-                      style={{
-                        position: 'absolute',
-                        top: '12px',
-                        left: '12px',
-                        backgroundColor: 'var(--color-forest)',
-                        color: '#FFFFFF',
-                        fontFamily: 'var(--font-sans)',
-                        fontSize: '0.675rem',
-                        fontWeight: '700',
-                        padding: '0.25rem 0.65rem',
-                        borderRadius: '4px',
-                        letterSpacing: '0.04em',
-                        boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
-                      }}
-                    >
+                    <div className="tag-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
                       {dest.duration || '2-4 Days'}
                     </div>
 
                     {/* Category Pill Tag */}
                     {dest.category && (
-                      <div
-                        style={{
-                          position: 'absolute',
-                          top: '12px',
-                          right: '12px',
-                          backgroundColor: 'rgba(253, 251, 247, 0.92)',
-                          color: 'var(--color-ink)',
-                          fontFamily: 'var(--font-sans)',
-                          fontSize: '0.65rem',
-                          fontWeight: '700',
-                          padding: '0.2rem 0.55rem',
-                          borderRadius: '4px',
-                          border: '1px solid rgba(195, 180, 160, 0.6)',
-                          backdropFilter: 'blur(2px)'
-                        }}
-                      >
+                      <div className="tag-light" style={{ position: 'absolute', top: '12px', right: '12px' }}>
                         {dest.category}
                       </div>
                     )}
@@ -264,7 +234,7 @@ export default function Destinations() {
                       {dest.name}
                     </h3>
 
-                    <div style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.55rem' }}>
+                    <div style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.55rem' }}>
                       "{dest.tagline || dest.subtitle}"
                     </div>
 
@@ -281,7 +251,7 @@ export default function Destinations() {
                     borderTop: '1px solid var(--color-border)',
                     backgroundColor: '#F5EFE3',
                     display: 'flex',
-                    justify: 'space-between',
+                    justifyContent: 'space-between',
                     alignItems: 'center'
                   }}
                 >
@@ -322,7 +292,7 @@ export default function Destinations() {
             backdropFilter: 'blur(8px)',
             display: 'flex',
             flexDirection: 'column',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             alignItems: 'center',
             padding: '1.5rem',
             animation: 'fadeIn 0.25s ease'
@@ -335,7 +305,7 @@ export default function Destinations() {
               width: '100%',
               maxWidth: '1000px',
               display: 'flex',
-              justify: 'space-between',
+              justifyContent: 'space-between',
               alignItems: 'center',
               color: '#FFFFFF'
             }}
@@ -379,7 +349,7 @@ export default function Destinations() {
               width: '100%',
               display: 'flex',
               alignItems: 'center',
-              justify: 'center'
+              justifyContent: 'center'
             }}
           >
             {selectedGallery.photos.length > 1 && (

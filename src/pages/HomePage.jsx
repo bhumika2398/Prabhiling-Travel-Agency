@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import BookingPanel from '../components/BookingPanel';
+import TrustMarquee from '../components/TrustMarquee';
 import Destinations from '../components/Destinations';
 import HowItWorks from '../components/HowItWorks';
 import WhyUs from '../components/WhyUs';
@@ -13,8 +13,8 @@ export default function HomePage({ config, onOpenBookingModal }) {
       {/* 1. Full-Screen Cinematic Adventure Hero (90-100vh) */}
       <Hero config={config} onOpenBookingModal={onOpenBookingModal} />
 
-      {/* 2. Travel Search & Booking Gateway — Positioned directly below Hero */}
-      <BookingPanel onOpenBookingModal={onOpenBookingModal} />
+      {/* 2. Trust Marquee — Continuous Scrolling Trust Signals */}
+      <TrustMarquee />
 
       {/* 3. Destination Discovery Section */}
       <div id="destinations-intro">

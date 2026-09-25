@@ -50,10 +50,10 @@
   --color-border: rgba(195, 180, 160, 0.45);
   --color-border-strong: rgba(165, 148, 125, 0.7);
 
-  /* Typography System — Poppins (Primary Body & UI) + Playfair Display (Serif Headings) */
-  --font-display: 'Playfair Display', Georgia, serif;    /* Playfair Display Serif Headings */
-  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Poppins Clean Sans Body */
-  --font-handwriting: 'Caveat', cursive;                 /* Handwritten Accent Notes */
+  /* Typography System — Cabinet Grotesk (Primary Sans, Headings & Body) + Cormorant Garamond (Elegant Italic Accent) */
+  --font-display: 'Cabinet Grotesk', system-ui, -apple-system, sans-serif;    /* Cabinet Grotesk Bold Headings */
+  --font-sans: 'Cabinet Grotesk', system-ui, -apple-system, sans-serif;       /* Cabinet Grotesk Clean Sans Body */
+  --font-handwriting: 'Cormorant Garamond', Georgia, serif;                  /* Cormorant Garamond Italic Accent Notes */
   --font-typewriter: var(--font-sans);                  /* Clean Sans for UI Badges & Buttons */
 
   /* Backward Compatibility Aliases */
@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .font-handwriting {
   font-family: var(--font-handwriting);
+  font-style: italic;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -304,22 +305,45 @@ input:focus, select:focus, textarea:focus {
   box-shadow: none !important;
 }
 
-/* Buttons — Modern Tactile & Clean */
+/* Buttons — Pill-Shaped, Bold Uppercase (Modern Travel-Booking UI) */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
   font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.925rem;
-  letter-spacing: 0.02em;
-  padding: 0.8rem 1.6rem;
-  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.7rem;
+  border-radius: 50px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
   position: relative;
   cursor: pointer;
+}
+
+/* Square Icon-Only Action Button (paired alongside a primary pill CTA) */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: var(--color-ink);
+  color: #FFFFFF;
+  border: 1px solid var(--color-ink);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-icon:hover {
+  background-color: var(--color-forest-dark);
+  border-color: var(--color-forest-dark);
+  transform: translateY(-2px);
 }
 
 .btn-primary {
@@ -374,13 +398,49 @@ input:focus, select:focus, textarea:focus {
 }
 
 .btn-sm {
-  padding: 0.5rem 1.15rem;
-  font-size: 0.85rem;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.7rem;
 }
 
 .btn-lg {
-  padding: 1rem 2.25rem;
-  font-size: 1.05rem;
+  padding: 1.05rem 2.4rem;
+  font-size: 0.875rem;
+}
+
+/* Dark Rounded-Pill Tag — for overlays on card images (category/status labels) */
+.tag-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: rgba(20, 18, 16, 0.82);
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* Light Rounded-Pill Tag — for overlays needing a pale/contrast background */
+.tag-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-ink);
+  background-color: rgba(253, 251, 247, 0.94);
+  backdrop-filter: blur(4px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 30px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Physical Card Standard */

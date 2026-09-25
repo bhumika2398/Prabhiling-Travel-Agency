@@ -32,31 +32,18 @@ export default function TourPackages({ onOpenPackageModal, onOpenBookingModal })
               <PaperCard
                 paperType="cream"
                 padding="0"
+                style={{ borderRadius: '18px' }}
               >
                 {/* Hero Package Image */}
                 <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}>
                   <img
                     src={pkg.image}
-                    alt={pkg.name}
+                    alt={pkg.title}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     loading="lazy"
                   />
 
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '12px',
-                      left: '12px',
-                      backgroundColor: 'var(--color-forest)',
-                      color: '#FFFFFF',
-                      fontFamily: 'var(--font-typewriter)',
-                      fontSize: '0.725rem',
-                      padding: '0.25rem 0.65rem',
-                      borderRadius: '4px',
-                      letterSpacing: '0.05em',
-                      fontWeight: '700'
-                    }}
-                  >
+                  <div className="tag-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
                     {pkg.duration}
                   </div>
                 </div>
@@ -73,11 +60,11 @@ export default function TourPackages({ onOpenPackageModal, onOpenBookingModal })
                       marginBottom: '0.35rem'
                     }}
                   >
-                    {pkg.name}
+                    {pkg.title}
                   </h3>
 
-                  <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.75rem' }}>
-                    "{pkg.tagline || pkg.subtitle}"
+                  <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.75rem' }}>
+                    "{pkg.destination}"
                   </p>
 
                   {/* Highlights List */}
@@ -94,8 +81,8 @@ export default function TourPackages({ onOpenPackageModal, onOpenBookingModal })
                               fontSize: '0.775rem',
                               backgroundColor: '#FFFFFF',
                               border: '1px solid var(--color-border)',
-                              padding: '0.2rem 0.55rem',
-                              borderRadius: '3px',
+                              padding: '0.25rem 0.7rem',
+                              borderRadius: '30px',
                               color: 'var(--color-ink-muted)'
                             }}
                           >
@@ -106,35 +93,29 @@ export default function TourPackages({ onOpenPackageModal, onOpenBookingModal })
                     </div>
                   )}
 
-                  {/* Footer Metadata */}
-                  <div
-                    style={{
-                      backgroundColor: '#FFFFFF',
-                      border: '1px solid var(--color-border)',
-                      padding: '0.75rem 1rem',
-                      borderRadius: '6px',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center'
-                    }}
-                  >
-                    <div>
-                      <span style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.625rem', color: 'var(--color-ink-light)', display: 'block' }}>STARTING FROM</span>
+                  {/* Footer: Divider + Price / Actions Row */}
+                  <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.85rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.9rem' }}>
+                      <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.625rem', color: 'var(--color-ink-light)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                        Starting from
+                      </span>
                       <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: '800', color: 'var(--color-forest)' }}>
-                        ₹{pkg.price ? pkg.price.toLocaleString() : '4,999'}
+                        ₹{pkg.startingPrice ? pkg.startingPrice.toLocaleString() : '4,999'}
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', gap: '0.4rem' }}>
+                    <div style={{ display: 'flex', gap: '0.5rem' }}>
                       <button
                         onClick={() => onOpenPackageModal(pkg)}
                         className="btn btn-outline btn-sm"
+                        style={{ flex: 1 }}
                       >
                         Details
                       </button>
                       <button
-                        onClick={() => onOpenBookingModal({ service: 'Tour Package', tourName: pkg.name })}
+                        onClick={() => onOpenBookingModal({ service: 'Tour Package', tourName: pkg.title })}
                         className="btn btn-primary btn-sm"
+                        style={{ flex: 1 }}
                       >
                         Enquire
                       </button>

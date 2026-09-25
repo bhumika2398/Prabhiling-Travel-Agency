@@ -36,11 +36,11 @@ export default function TourDetailPage({ config, onOpenBookingModal }) {
                   marginBottom: '0.5rem'
                 }}
               >
-                {pkg.name}
+                {pkg.title}
               </h1>
 
-              <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.35rem', color: 'var(--color-terracotta)' }}>
-                "{pkg.tagline || pkg.subtitle}"
+              <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.35rem', color: 'var(--color-terracotta)' }}>
+                "{pkg.destination}"
               </p>
             </div>
 
@@ -64,7 +64,7 @@ export default function TourDetailPage({ config, onOpenBookingModal }) {
               <button
                 className="btn btn-primary btn-lg"
                 style={{ width: '100%' }}
-                onClick={() => onOpenBookingModal({ service: 'Tour Package', tourName: pkg.name })}
+                onClick={() => onOpenBookingModal({ service: 'Tour Package', tourName: pkg.title })}
               >
                 Enquire Tour Package →
               </button>

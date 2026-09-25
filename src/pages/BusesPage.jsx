@@ -88,8 +88,12 @@ export default function BusesPage({ onOpenBookingModal }) {
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)'
               }}
             >
-              OUR 7-BUS LUXURY FLEET
+              Our 7-Bus Luxury Fleet
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-terracotta)', marginBottom: '1.1rem' }}>
+              Seven coaches, one promise of comfort.
+            </p>
 
             <p
               style={{

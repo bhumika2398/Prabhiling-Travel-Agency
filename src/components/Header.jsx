@@ -67,7 +67,7 @@ export default function Header({ config, onOpenBookingModal }) {
               borderRadius: '4px',
               display: 'flex',
               alignItems: 'center',
-              justify: 'center',
+              justifyContent: 'center',
               boxShadow: '0 3px 10px rgba(0,0,0,0.15)',
               border: '1px solid rgba(255,255,255,0.2)'
             }}
@@ -177,7 +177,7 @@ export default function Header({ config, onOpenBookingModal }) {
                   color: isActive ? 'var(--color-terracotta)' : 'var(--color-ink)',
                   padding: '0.5rem 0',
                   display: 'flex',
-                  justify: 'space-between',
+                  justifyContent: 'space-between',
                   alignItems: 'center',
                   borderBottom: '1px solid var(--color-border)',
                   textDecoration: 'none'

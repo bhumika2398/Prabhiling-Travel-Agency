@@ -122,8 +122,12 @@ export default function TrainBookingPage({ config, onOpenBookingModal }) {
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)'
               }}
             >
-              ALL-INDIA TRAIN TICKET RESERVATION DESK
+              All-India Train Ticket Reservation Desk
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-terracotta)', marginBottom: '1.1rem' }}>
+              Every berth, booked with heart.
+            </p>
 
             <p
               style={{

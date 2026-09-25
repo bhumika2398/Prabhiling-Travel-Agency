@@ -87,7 +87,7 @@ export default function TravelStories() {
               </div>
 
               <div style={{ padding: '1.25rem' }}>
-                <span style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.2rem', color: 'var(--color-forest)', display: 'block', marginBottom: '0.2rem' }}>
+                <span style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.2rem', color: 'var(--color-forest)', display: 'block', marginBottom: '0.2rem' }}>
                   <MapPin size={14} style={{ color: 'var(--color-terracotta)', display: 'inline', marginRight: '4px', verticalAlign: '-2px' }} /> {story.location}
                 </span>
 

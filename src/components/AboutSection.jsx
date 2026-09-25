@@ -49,7 +49,7 @@ export default function AboutSection({ onOpenBookingModal }) {
                 />
 
                 <div style={{ marginTop: '1rem', textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.25rem', color: 'var(--color-terracotta)' }}>
+                  <span style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.25rem', color: 'var(--color-terracotta)' }}>
                     "Our fleet & team on South India roads..."
                   </span>
                   <TravelStamp text="ESTABLISHED" color="var(--color-forest)" />

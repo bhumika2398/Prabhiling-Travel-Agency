@@ -14,7 +14,7 @@ export default function Hero() {
         marginTop: '-72px', // Pull background up behind transparent header
         display: 'flex',
         alignItems: 'center',
-        justify: 'center',
+        justifyContent: 'center',
         overflow: 'hidden',
         backgroundColor: '#121914'
       }}
@@ -64,65 +64,82 @@ export default function Hero() {
         <MapPin size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: '-2px', color: 'var(--color-terracotta)' }} /> 12°25'N 75°44'E • WESTERN GHATS
       </div>
 
-      {/* 4. Central Hero Copy & Actions */}
+      {/* 4. Left-Aligned Hero Copy & Actions */}
       <div
         className="container"
         style={{
           position: 'relative',
           zIndex: 10,
           paddingTop: '3.5rem',
-          textAlign: 'center',
-          maxWidth: '860px',
+          textAlign: 'left',
           color: '#FFFFFF'
         }}
       >
         {/* Subtle Brand Tagline */}
         <div
           style={{
-            display: 'inline-block',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.55rem',
             fontFamily: 'var(--font-typewriter)',
             fontSize: '0.775rem',
             color: '#FDFBF7',
-            letterSpacing: '0.22em',
+            letterSpacing: '0.16em',
             textTransform: 'uppercase',
-            marginBottom: '1.25rem',
+            marginBottom: '1.5rem',
             backgroundColor: 'rgba(255, 255, 255, 0.12)',
-            padding: '0.35rem 1.15rem',
-            borderRadius: '2px',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
+            padding: '0.45rem 1.25rem',
+            borderRadius: '30px',
+            border: '1px solid rgba(255, 255, 255, 0.25)',
             backdropFilter: 'blur(4px)'
           }}
         >
-          PRABHULING TRAVELS • SOUTH INDIA
+          <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--color-terracotta)', display: 'inline-block' }} />
+          Every Journey Has A Story
         </div>
 
-        {/* Large Expressive Editorial Headline */}
+        {/* Large Editorial Headline — Mixed Case with Accent Word */}
         <h1
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(2.8rem, 6vw, 5.2rem)',
+            fontSize: 'clamp(2.6rem, 5vw, 4.25rem)',
             fontWeight: '800',
             color: '#FFFFFF',
-            lineHeight: '1.05',
+            lineHeight: '1.08',
             letterSpacing: '-0.02em',
-            marginBottom: '1.25rem',
+            marginBottom: '1.1rem',
+            maxWidth: '650px',
             textShadow: '0 4px 20px rgba(0,0,0,0.4)'
           }}
         >
-          YOUR NEXT <br />
-          <span style={{ fontStyle: 'italic', fontWeight: '400', color: '#FDFBF7' }}>ADVENTURE</span> AWAITS.
+          Your Next<br />
+          Adventure <span style={{ color: 'var(--color-terracotta)' }}>Awaits.</span>
         </h1>
+
+        {/* Italic Accent Tagline */}
+        <p
+          style={{
+            fontFamily: 'var(--font-handwriting)',
+            fontStyle: 'italic',
+            fontSize: 'clamp(1.2rem, 2.2vw, 1.5rem)',
+            color: '#FDFBF7',
+            marginBottom: '1.1rem',
+            textShadow: '0 2px 10px rgba(0,0,0,0.4)'
+          }}
+        >
+          Where comfort meets the freedom to explore.
+        </p>
 
         {/* Short Concise Supporting Statement */}
         <p
           style={{
             fontFamily: 'var(--font-sans)',
-            fontSize: 'clamp(1.05rem, 2vw, 1.25rem)',
-            color: 'rgba(255, 255, 255, 0.92)',
+            fontSize: 'clamp(1rem, 2vw, 1.15rem)',
+            color: 'rgba(255, 255, 255, 0.88)',
             fontWeight: '400',
             lineHeight: '1.6',
-            maxWidth: '680px',
-            margin: '0 auto 2.25rem auto',
+            maxWidth: '620px',
+            marginBottom: '2.25rem',
             textShadow: '0 2px 10px rgba(0,0,0,0.5)'
           }}
         >
@@ -130,46 +147,47 @@ export default function Hero() {
         </p>
 
         {/* Primary CTA & Secondary Action */}
-        <div style={{ display: 'flex', gap: '1.25rem', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '1.1rem', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap' }}>
           <Link
             to="/tours"
             className="btn"
             style={{
               backgroundColor: 'var(--color-terracotta)',
               color: '#FFFFFF',
-              padding: '1rem 2.4rem',
-              fontSize: '1rem',
+              padding: '1rem 2.2rem',
+              fontSize: '0.95rem',
               fontWeight: '700',
-              letterSpacing: '0.05em',
-              borderRadius: '4px',
+              letterSpacing: '0.03em',
+              borderRadius: '50px',
               border: '1px solid rgba(255,255,255,0.2)',
               boxShadow: '0 6px 20px rgba(200, 90, 50, 0.35)',
               textDecoration: 'none'
             }}
           >
-            EXPLORE TOURS <ArrowRight size={18} />
+            Start Your Journey <ArrowRight size={18} />
           </Link>
 
           <a
             href="#destinations-intro"
             style={{
-              color: 'rgba(255, 255, 255, 0.88)',
-              fontFamily: 'var(--font-typewriter)',
-              fontSize: '0.8rem',
-              letterSpacing: '0.1em',
+              color: 'rgba(255, 255, 255, 0.92)',
+              fontFamily: 'var(--font-sans)',
+              fontSize: '0.95rem',
+              fontWeight: '600',
+              letterSpacing: '0.01em',
               textDecoration: 'none',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.4rem',
-              padding: '0.8rem 1.25rem',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              borderRadius: '4px',
-              backgroundColor: 'rgba(255, 255, 255, 0.08)',
+              gap: '0.5rem',
+              padding: '1rem 2rem',
+              border: '1px solid rgba(255, 255, 255, 0.35)',
+              borderRadius: '50px',
+              backgroundColor: 'rgba(255, 255, 255, 0.06)',
               backdropFilter: 'blur(4px)',
               transition: 'all 0.2s ease'
             }}
           >
-            DISCOVER DESTINATIONS <ArrowDown size={14} />
+            Explore Destinations <ArrowDown size={14} />
           </a>
         </div>
       </div>

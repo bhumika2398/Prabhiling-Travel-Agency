@@ -61,8 +61,12 @@ export default function AboutPage({ config, onOpenBookingModal }) {
                 textShadow: '0 4px 18px rgba(0,0,0,0.4)'
               }}
             >
-              ABOUT PRABHULING TRAVELS
+              About Prabhuling Travels
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.5rem', color: 'var(--color-terracotta)', marginBottom: '1.1rem' }}>
+              A decade of dependable journeys.
+            </p>
 
             <p style={{ fontSize: '1.15rem', color: 'rgba(255, 255, 255, 0.92)', lineHeight: '1.65', marginBottom: '2.25rem', maxWidth: '720px', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
               Building trust through direct bus fleet ownership, transparent fare structures, & dedicated 24/7 human assistance across South India for over a decade.

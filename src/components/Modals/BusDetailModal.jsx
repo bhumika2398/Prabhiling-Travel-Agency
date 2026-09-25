@@ -15,7 +15,7 @@ export default function BusDetailModal({ bus, isOpen, onClose, onBookBus }) {
         backdropFilter: 'blur(4px)',
         display: 'flex',
         alignItems: 'center',
-        justify: 'center',
+        justifyContent: 'center',
         padding: '1rem'
       }}
       className="animate-fade-in"
@@ -40,7 +40,7 @@ export default function BusDetailModal({ bus, isOpen, onClose, onBookBus }) {
             color: '#FFFFFF',
             padding: '1.25rem 1.5rem',
             display: 'flex',
-            justify: 'space-between',
+            justifyContent: 'space-between',
             alignItems: 'center'
           }}
         >
@@ -61,7 +61,7 @@ export default function BusDetailModal({ bus, isOpen, onClose, onBookBus }) {
         <div style={{ padding: '1.5rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
             <div>
-              <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.25rem', color: 'var(--color-terracotta)', marginBottom: '0.4rem' }}>
+              <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.25rem', color: 'var(--color-terracotta)', marginBottom: '0.4rem' }}>
                 "{bus.tagline || 'Directly owned & maintained coach'}"
               </p>
               <div style={{ fontSize: '0.9rem', color: 'var(--color-ink-muted)' }}>

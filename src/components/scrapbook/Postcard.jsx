@@ -97,7 +97,7 @@ export default function Postcard({
             </div>
 
             {subtitle && (
-              <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.2rem', color: 'var(--color-forest)', marginBottom: '0.5rem' }}>
+              <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.2rem', color: 'var(--color-forest)', marginBottom: '0.5rem' }}>
                 "{subtitle}"
               </p>
             )}

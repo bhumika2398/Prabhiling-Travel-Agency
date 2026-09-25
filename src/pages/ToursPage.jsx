@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { PACKAGES } from '../data/packagesData';
 import PaperCard from '../components/scrapbook/PaperCard';
 import TravelStamp from '../components/scrapbook/TravelStamp';
@@ -9,9 +10,9 @@ export default function ToursPage({ onOpenBookingModal }) {
   const [filterDest, setFilterDest] = useState('All');
 
   const filteredPackages = PACKAGES.filter(pkg => {
-    if (filterDest === 'Heritage') return pkg.name.includes('Heritage') || pkg.name.includes('Temple') || pkg.name.includes('Pilgrimage');
-    if (filterDest === 'Beach') return pkg.name.includes('Beach') || pkg.name.includes('Goa') || pkg.name.includes('Gokarna');
-    if (filterDest === 'Hills') return pkg.name.includes('Coorg') || pkg.name.includes('Chikmagalur') || pkg.name.includes('Wayanad');
+    if (filterDest === 'Heritage') return pkg.title.includes('Heritage') || pkg.title.includes('Temple') || pkg.title.includes('Pilgrimage');
+    if (filterDest === 'Beach') return pkg.title.includes('Beach') || pkg.title.includes('Goa') || pkg.title.includes('Gokarna');
+    if (filterDest === 'Hills') return pkg.title.includes('Coorg') || pkg.title.includes('Chikmagalur') || pkg.title.includes('Wayanad');
     return true;
   });
 
@@ -101,8 +102,12 @@ export default function ToursPage({ onOpenBookingModal }) {
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)'
               }}
             >
-              SIGNATURE TOURS & DESTINATIONS
+              Signature Tours & Destinations
             </h1>
+
+            <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.5rem', color: '#F2A87A', marginBottom: '1.1rem' }}>
+              Handcrafted escapes, curated with care.
+            </p>
 
             <p
               style={{
@@ -180,33 +185,16 @@ export default function ToursPage({ onOpenBookingModal }) {
         {/* Tour Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2rem 1.75rem' }}>
           {filteredPackages.map((pkg, idx) => {
-            const rot = idx % 2 === 0 ? '-1deg' : '1deg';
-
             return (
               <PaperCard
                 key={pkg.id}
                 paperType="cream"
-                torn="none"
-                rotation={rot}
-                tape={true}
-                tapePosition="top-center"
                 padding="0"
+                style={{ borderRadius: '18px' }}
               >
                 <div style={{ position: 'relative', height: '210px', overflow: 'hidden' }}>
-                  <img src={pkg.image} alt={pkg.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '12px',
-                      left: '12px',
-                      backgroundColor: 'var(--color-forest)',
-                      color: '#FFFFFF',
-                      fontFamily: 'var(--font-typewriter)',
-                      fontSize: '0.725rem',
-                      padding: '0.25rem 0.65rem',
-                      borderRadius: '2px'
-                    }}
-                  >
+                  <img src={pkg.image} alt={pkg.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <div className="tag-dark" style={{ position: 'absolute', top: '12px', left: '12px' }}>
                     {pkg.duration}
                   </div>
                   <div style={{ position: 'absolute', bottom: '12px', right: '12px' }}>
@@ -216,26 +204,35 @@ export default function ToursPage({ onOpenBookingModal }) {
 
                 <div style={{ padding: '1.35rem 1.25rem 1.25rem 1.25rem' }}>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', fontWeight: '700', color: 'var(--color-ink)', marginBottom: '0.2rem' }}>
-                    {pkg.name}
+                    {pkg.title}
                   </h3>
-                  <p style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.65rem' }}>
-                    "{pkg.tagline || pkg.subtitle}"
+                  <p style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.15rem', color: 'var(--color-terracotta)', marginBottom: '0.85rem' }}>
+                    "{pkg.destination}"
                   </p>
 
-                  <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.75rem', marginTop: '0.5rem' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <div>
-                        <span style={{ fontFamily: 'var(--font-typewriter)', fontSize: '0.625rem', color: 'var(--color-ink-light)', display: 'block' }}>STARTING FROM</span>
-                        <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: '800', color: 'var(--color-forest)' }}>
-                          ₹{pkg.price ? pkg.price.toLocaleString() : '4,999'}
-                        </div>
+                  <div style={{ borderTop: '1px solid var(--color-border)', paddingTop: '0.85rem', marginTop: '0.5rem' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.9rem' }}>
+                      <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.625rem', color: 'var(--color-ink-light)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                        Starting from
+                      </span>
+                      <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.3rem', fontWeight: '800', color: 'var(--color-forest)' }}>
+                        ₹{pkg.startingPrice ? pkg.startingPrice.toLocaleString() : '4,999'}
                       </div>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '0.75rem' }}>
+                      <Link
+                        to={`/tours/${pkg.id}`}
+                        style={{ fontSize: '0.8rem', fontWeight: '700', color: 'var(--color-terracotta)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}
+                      >
+                        View Details →
+                      </Link>
 
                       <button
-                        onClick={() => onOpenBookingModal({ service: 'Tour Package', tourName: pkg.name })}
+                        onClick={() => onOpenBookingModal({ service: 'Tour Package', tourName: pkg.title })}
                         className="btn btn-primary btn-sm"
                       >
-                        Enquire Package →
+                        Enquire
                       </button>
                     </div>
                   </div>

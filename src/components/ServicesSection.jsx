@@ -45,7 +45,7 @@ export default function ServicesSection({ onOpenBookingModal }) {
               key={srv.id}
               paperType="sand"
               padding="1.5rem"
-              style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '280px' }}
+              style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '280px', borderRadius: '18px' }}
             >
               <div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
@@ -55,10 +55,10 @@ export default function ServicesSection({ onOpenBookingModal }) {
                       height: '44px',
                       backgroundColor: 'var(--color-forest)',
                       color: '#FFFFFF',
-                      borderRadius: '6px',
+                      borderRadius: '14px',
                       display: 'flex',
                       alignItems: 'center',
-                      justify: 'center'
+                      justifyContent: 'center'
                     }}
                   >
                     {renderIcon(srv.iconName)}
@@ -81,7 +81,7 @@ export default function ServicesSection({ onOpenBookingModal }) {
                   {srv.title}
                 </h3>
 
-                <span style={{ fontFamily: 'var(--font-handwriting)', fontSize: '1.1rem', color: 'var(--color-terracotta)', display: 'block', marginBottom: '0.6rem' }}>
+                <span style={{ fontFamily: 'var(--font-handwriting)', fontStyle: 'italic', fontSize: '1.1rem', color: 'var(--color-terracotta)', display: 'block', marginBottom: '0.6rem' }}>
                   "{srv.tagline}"
                 </span>
 
@@ -97,8 +97,8 @@ export default function ServicesSection({ onOpenBookingModal }) {
                     fontSize: '0.65rem',
                     backgroundColor: '#FFFFFF',
                     border: '1px solid var(--color-border)',
-                    padding: '0.2rem 0.5rem',
-                    borderRadius: '4px',
+                    padding: '0.25rem 0.65rem',
+                    borderRadius: '30px',
                     color: 'var(--color-terracotta)',
                     fontWeight: '700'
                   }}
